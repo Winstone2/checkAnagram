@@ -1,0 +1,16 @@
+# checkAnagram
+To check if two strings are anagrams of each other, we can compare their character frequencies. An anagram is a word or phrase formed by rearranging the letters of another, using all the original letters exactly once. Therefore, if two strings are anagrams, they will have the same characters with the same frequency, but in a different order.
+Thought Process:
+
+    The main function areAnagrams takes two strings str1 and str2 as input to check if they are anagrams of each other.
+    We convert both strings to lowercase using the toLowerCase() method to make the comparison case-insensitive. This ensures that the function works for strings with different cases.
+    We use helper functions getCharacterFrequency to create character frequency maps for both strings. The getCharacterFrequency function counts the frequency of each character in the string and stores it in a Map data structure.
+    After creating the character frequency maps, we use another helper function compareFrequencyMaps to compare the frequency maps of both strings. The compareFrequencyMaps function checks if the two maps have the same size (number of unique characters) and if the frequency of each character is the same in both maps.
+    If the character frequency maps match, we return true, indicating that the strings are anagrams. Otherwise, we return false.
+
+Edge Cases to Consider:
+
+    Empty Strings: If either or both input strings are empty, they cannot be anagrams of each other. In such cases, the function should return false.
+    Different Lengths: If the input strings have different lengths, they cannot be anagrams, as an anagram requires the same number of characters with the same frequency. The function should return false in such cases.
+    Case Insensitivity: The function should handle strings with different cases (uppercase and lowercase) and consider them as potential anagrams.
+In this example, the areAnagrams function correctly identifies that the strings "Listen" and "Silent" are anagrams of each other, regardless of their case.
